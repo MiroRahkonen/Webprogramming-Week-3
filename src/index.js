@@ -7,7 +7,10 @@ async function fetchdata() {
   let dataJSON = await promise.json();
   let stringJSON = JSON.stringify(dataJSON);
   let json = JSON.parse(stringJSON);
-  let municipalities = json.dataset.dimension.Alue.category.index;
+  let municipalities = Object.values(
+    json.dataset.dimension.Alue.category.label
+  );
+  console.log(municipalities);
   let populations = json.dataset.value;
   let length = json.dataset.value.length;
   console.log(json);
