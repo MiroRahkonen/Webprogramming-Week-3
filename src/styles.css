@@ -1,5 +1,8 @@
-td {
+html{
   font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+td {
   padding: 6px;
   border-bottom: 1px solid;
   border-color: gray;
