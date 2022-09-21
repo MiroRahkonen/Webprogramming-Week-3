@@ -35,16 +35,17 @@ async function fetchdata() {
     let emp_percent = (employees[i] / populations[i]) * 100;
     emp_percent = emp_percent.toFixed(2);
     cell4.innerText = emp_percent;
-    if (emp_percent > 45) {
-      cell4.style.backgroundColor = "#abffbd";
-    } else if (emp_percent < 25) {
-      cell4.style.backgroundColor = "#ff9e9e";
-    }
-
+    
     tr.appendChild(cell1);
     tr.appendChild(cell2);
     tr.appendChild(cell3);
     tr.appendChild(cell4);
+    if(emp_percent > 45){
+        tr.style.backgroundColor = "#abffbd";
+    } 
+    else if(emp_percent<25){
+        tr.style.backgroundColor = "#ff9e9e";
+    }
     datatable.appendChild(tr);
   }
 }
